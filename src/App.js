@@ -11,7 +11,7 @@ const App = () => (
       <Navbar />
     </div>
     <div className="main">
-      <Layout>
+      <div>
         <div className="routes">
           <Switch>
             <Route exact path="/">
@@ -31,11 +31,11 @@ const App = () => (
             </Route>
           </Switch>
         </div>
-      </Layout>
+      </div>
       <div className="footer">
-        <Typography.Title level={5} style={{ color: 'white', textAlign: 'center' }}>Copyright © 2022
+        <Typography.Title level={5} style={{ color: 'white', textAlign: 'center' }}>Copyright ©  
           <Link style={{ color: 'white', textAlign: 'center' }} to="/">
-            Digital Wealth Inc. 
+             2022 Digital Wealth Inc. 
           </Link>
         </Typography.Title>
         <Space>

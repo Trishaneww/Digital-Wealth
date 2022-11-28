@@ -2,7 +2,7 @@ import React from 'react';
 import millify from 'millify';
 import { Typography, Row, Col, Statistic } from 'antd';
 import { Link } from 'react-router-dom';
-
+import {PlusOutlined } from '@ant-design/icons';
 import { useGetCryptosQuery } from '../services/cryptoApi';
 import Cryptocurrencies from './Cryptocurrencies';
 import News from './News';
@@ -18,23 +18,49 @@ const Homepage = () => {
 
   return (
     <>
-      <Title level={2} className="heading">Global Crypto Stats</Title>
-      <Row gutter={[32, 32]}>
-        <Col span={12}><Statistic title="Total Cryptocurrencies" value={globalStats.total} /></Col>
-        <Col span={12}><Statistic title="Total Exchanges" value={millify(globalStats.totalExchanges)} /></Col>
-        <Col span={12}><Statistic title="Total Market Cap:" value={`$${millify(globalStats.totalMarketCap)}`} /></Col>
-        <Col span={12}><Statistic title="Total 24h Volume" value={`$${millify(globalStats.total24hVolume)}`} /></Col>
-        <Col span={12}><Statistic title="Total Cryptocurrencies" value={globalStats.total} /></Col>
-        <Col span={12}><Statistic title="Total Markets" value={millify(globalStats.totalMarkets)} /></Col>
+      <Row  gutter={[32, 32]}>
+        <div class="global-stats">
+        <Col className="space" span={4}>
+          <div>
+            <p class="title">Cryptocurrencies</p>
+            <p class="num">{globalStats.total}</p>
+          </div>
+        </Col>
+        <Col className="space" span={4}>
+          <div class="ban">
+            <p class="title">Exchanges</p>
+            <p class="num">{millify(globalStats.totalExchanges)}</p>
+          </div>
+        </Col>
+        <Col className="space" span={4}>
+          <div>
+            <p class="title">Market Cap</p>
+            <p class="num">{`$${millify(globalStats.totalMarketCap)}`}</p>
+          </div>
+        </Col>
+        <Col className="space" span={4}>
+          <div>
+            <p class="title">24h Volume</p>
+            <p class="num">{`$${millify(globalStats.total24hVolume)}`}</p>
+          </div>
+        </Col>
+        <Col className="space" span={4}>
+          <div>
+            <p class="title">Markets</p>
+            <p class="num">{millify(globalStats.totalMarkets)}</p>
+          </div>
+        </Col>
+        </div>
       </Row>
+
       <div className="home-heading-container">
-        <Title level={2} className="home-title">Top 10 Cryptos In The World</Title>
-        <Title level={3} className="show-more"><Link to="/cryptocurrencies">Show more</Link></Title>
+        <h1 class="home-title">Top 10 Cryptos In The World</h1>
+        <Title level={3} className="show-more"><Link to="/cryptocurrencies">{<PlusOutlined />}</Link></Title>
       </div>
       <Cryptocurrencies simplified />
       <div className="home-heading-container">
-        <Title level={2} className="home-title">Latest Crypto News</Title>
-        <Title level={3}><Link to="/news">Show more</Link></Title>
+        <h1 class="home-title">Latest Crypto News</h1>
+        <Title level={3}><Link to="/news">{<PlusOutlined />}</Link></Title>
       </div>
       <News simplified />
     </>
