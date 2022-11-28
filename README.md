@@ -2,7 +2,7 @@
 
 ## Overview
 
-With the growth of technology and increase in financial eduction to young people, investing has become increasingly popular within the past few years. Crypto Station empowers prospective cryptocurrency investors through its fascinating data platform. Users have the unique capability to view the current market prices, its related charts, and trending news within the industry in order to make an informed decesion on their next purchase, or simply satisfy their curiosity!
+With the growth of technology and increase in financial eduction to young people, investing has become increasingly popular within the past few years. Digital Wealth empowers prospective cryptocurrency investors through its fascinating data platform. Users have the unique capability to view the current market prices, its related charts, and trending news within the industry in order to make an informed decesion on their next purchase, or simply satisfy their curiosity!
 
 ## Navigation
 - [Features](#features)
@@ -12,10 +12,13 @@ With the growth of technology and increase in financial eduction to young people
 
 ## Features
 
-- In order to gain access to all capabilities of this application, users must sign up/log in to their account
+- In order to gain access to all capabilities of this application, users must sign up/login to their account
 - When clicking the favourite button on a crypto, it will add the given crypto to your watch list
-- When clicking on a cryptocurrency, the corrospomding data (market price, charts) will display
-- Crypto Station is fully responsive and intended for mobile use!
+- Users can filter through the cryptocurrencies using the searchbar
+- When clicking on a cryptocurrency, the corrospomding data (market price, charts, descriptions, links) will display
+- When clicking the news icon, users will be directed to the news page containing the most recent industry news
+- Users can filter through these articles by coin name, and will be directed to the article by clicking on the news card
+- Digital Wealth is fully responsive and intended for mobile use!
 
 ## Technologies
 
