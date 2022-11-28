@@ -31,17 +31,17 @@ With the growth of technology and increase in financial eduction to young people
 
 ## Credits
 
-### Thach Minh
-Link to Thach's [GitHub Profile](https://github.com/TsunomakiWatamee)
-
 ### Trishane Wijeyawickrema
 Link to Trishane's [GitHub Profile](https://github.com/Trishaneww)
+
+### Thach Minh
+Link to Thach's [GitHub Profile](https://github.com/TsunomakiWatamee)
 
 ## License
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Copyright (c) 2022 Thach, Trishane
+Copyright (c) 2022 Trishane, Thach
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
