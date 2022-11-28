@@ -1,3 +1,5 @@
+const { default: Navbar } = require("../../src/components/Navbar");
+
 const loginFormHandler = async function (event) {
     event.preventDefault();
   
@@ -24,5 +26,5 @@ const loginFormHandler = async function (event) {
   
   document
     .querySelector('#login-form')
-    .addEventListener('submit', loginFormHandler)
+    .addEventListener('submit', Navbar)
   
