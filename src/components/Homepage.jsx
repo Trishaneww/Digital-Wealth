@@ -55,12 +55,12 @@ const Homepage = () => {
 
       <div className="home-heading-container">
         <h1 class="home-title">Top 10 Cryptos In The World</h1>
-        <Title level={3} className="show-more"><Link to="/cryptocurrencies">{<PlusOutlined />}</Link></Title>
+        <a class="plus-icon" href="/cryptocurrencies">{<PlusOutlined />}</a>
       </div>
       <Cryptocurrencies simplified />
       <div className="home-heading-container">
         <h1 class="home-title">Latest Crypto News</h1>
-        <Title level={3}><Link to="/news">{<PlusOutlined />}</Link></Title>
+        <a class="plus-icon" href="/news">{<PlusOutlined />}</a>
       </div>
       <News simplified />
     </>

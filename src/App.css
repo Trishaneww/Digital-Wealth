@@ -12,6 +12,10 @@
  .link {
      background-color: white;
  }
+
+ .plus-icon {
+    color:#ba00da;
+ }
  
  a:hover{
      color: var(--pink) !important;
@@ -49,9 +53,9 @@
      border-radius: 10%;
  }
  
- #dark-mode .news-border {
+.news-border {
      background-image: linear-gradient(96.28deg,#ddcfff,#b46fc1 99.28%);
-     width:340px;
+     width:480px;
      height: 350px;
      text-align:center;
      padding:4px;
@@ -61,7 +65,7 @@
 
  #light-mode .news-border {
     background-image: linear-gradient(96.28deg,#ddcfff,#b46fc1 99.28%);
-    width:340px;
+    width:480px;
     height: 350px;
     text-align:center;
     padding:4px;
@@ -93,6 +97,123 @@
     transition: transform 200ms;
 }
 
+.crypto-carddd {
+    background-color:#352b5d;
+    color: white;
+    width:100%;
+    height: 342px;
+    text-align:center;
+    border-radius: 10%;
+    font-family: Inter, sans-serif;
+    font-weight: 800;
+    transition: transform 200ms;
+    padding: 15px;
+}
+
+#light-mode .crypto-carddd {
+    background-color: white;
+    width:100%;
+    height: 342px;
+    text-align:center;
+    border-radius: 10%;
+    font-family: Inter, sans-serif;
+    font-weight: 800;
+    transition: transform 200ms;
+    padding: 15px;
+}
+
+.news-title {
+    font-size: 20px;
+    color: white;
+    text-align:left;
+}
+
+#light-mode .news-title {
+    color: black;
+    font-size: 20px;
+    text-align:left;
+}
+
+.reference-title {
+    color: white;
+    font-size: 12px;
+ }
+
+#light-mode .reference-title {
+    color: black;
+    font-size: 12px;
+ }
+
+ /*-------------------------------------------------------- Navbar -------------------------------------------------------- */
+ .a {
+    background-color: #352b5d;
+    color:#726e86;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 20px 23px 20px;
+}
+
+#light-mode .a {
+    background: #ddcfff;
+    color:white;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 20px 23px 20px;
+}
+
+.nav-container{
+    position: fixed;
+    left: 0;
+    margin: 10px;
+    height: 100vh;
+    margin: 0px;
+    background-color: #352b5d;
+}
+
+#light-mode .nav-container{
+    position: fixed;
+    left: 0;
+    margin: 10px;
+    height: 100vh;
+    margin: 0px;
+    background-color: #ddcfff;
+}
+
+.logo-container{
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    width: 100%;
+    background-color:#352b5d;
+}
+
+#light-mode .logo-container{
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    width: 100%;
+    background-color:#ddcfff;
+}
+.logo{
+    color:white;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.logo a{
+   color: white;
+}
+
+.menu-control-container{
+    display: none !important;
+    position: absolute !important;
+    right: 10px !important;
+    top: 25px !important;
+    font-size: 1.2rem !important;
+    background-color: var(--bgSecondary) !important;
+    border: none !important;
+}
+
 .name {
     margin-top: 6%;
     font-size: 23px;
@@ -109,19 +230,18 @@
    font-size: 15px;
 }
 
-.reference-title {
-   color: white;
-   font-size: 12px;
+
+.stat-title {
+    font-size: 25px;
 }
 
 #light-mode .stat-title {
     font-size: 25px;
 }
 
-.news-title {
-    font-size: 20px;
-    color: white;
-    text-align:left;
+#light-mode .routes {
+    padding: 50px;
+    background-color: white;
 }
 
 .crypto-cardd:hover, .crypto-carddd:hover {
@@ -160,9 +280,19 @@
      -webkit-text-fill-color: transparent;
      -webkit-background-clip: text;
  }
+
+ #light-mode .num {
+    font-family: Inter, sans-serif;
+    font-weight: 800;
+    font-size: 50px;
+    text-align: center;
+    background: linear-gradient(
+             to bottom, #4600ea, #ba00da);
+     -webkit-text-fill-color: transparent;
+     -webkit-background-clip: text;
+}
  
  .global-stats {
-     /* background-image: linear-gradient(96.28deg,#899eff,#c328f6 99.28%); */
      display: flex;
      flex-direction: row;
      flex-wrap: wrap;
@@ -174,7 +304,21 @@
      justify-content: center;
      align-content: center;
  }
- 
+
+ #light-mode .global-stats {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #ddcfff;
+    width:90%;
+    height: 300px;
+    border-radius: 5%;
+    margin-left: 5%;
+    justify-content: center;
+    align-content: center;
+}
+
+
  .space {
      width: 20px;
      margin-left: 4px;
@@ -247,47 +391,7 @@
      padding: 50px;
      background-color: #170f34;
  }
- 
-#light-mode .routes {
-    padding: 50px;
-    background-color: #bcb2e2;
-}
 
- .nav-container{
-     position: fixed;
-     left: 0;
-     margin: 10px;
-     height: 100vh;
-     margin: 0px;
-     background-color: #352b5d;
- }
- 
- .logo-container{
-     display: flex;
-     padding: 20px;
-     align-items: center;
-     width: 100%;
-     background-color:#352b5d;
- }
- .logo{
-     color:white;
-     font-weight: 700;
-     font-size: 30px;
- }
- 
- .logo a{
-    color: white;
- }
- 
- .menu-control-container{
-     display: none !important;
-     position: absolute !important;
-     right: 10px !important;
-     top: 25px !important;
-     font-size: 1.2rem !important;
-     background-color: var(--bgSecondary) !important;
-     border: none !important;
- }
  
  .loader{
      height: 81vh;
@@ -643,13 +747,6 @@
      flex-direction: column;
  }
  
- .a {
-     background-color: #352b5d;
-     color:#726e86;
-     font-size: 17px;
-     font-weight: 600;
-     padding: 20px 23px 20px;
- }
  
  .home-title{
      font-family: Inter, sans-serif;
