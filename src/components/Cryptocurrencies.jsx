@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import millify from 'millify';
 import { Link } from 'react-router-dom';
-import { Card, Row, Col, Input } from 'antd';
+import { Row, Col, Input } from 'antd';
 
 import { useGetCryptosQuery } from '../services/cryptoApi';
 import Loader from './Loader';
@@ -15,7 +15,7 @@ const Cryptocurrencies = ({ simplified }) => {
   useEffect(() => {
     setCryptos(cryptosList?.data?.coins);
 
-    const filteredData = cryptosList?.data?.coins.filter((item) => item.name.toLowerCase().includes(searchTerm)); //search filter functionality
+    const filteredData = cryptosList?.data?.coins.filter((item) => item.name.toLowerCase().includes(searchTerm));
 
     setCryptos(filteredData);
   }, [cryptosList, searchTerm]);
@@ -45,23 +45,23 @@ const Cryptocurrencies = ({ simplified }) => {
             {/* Note: Change currency.id to currency.uuid  */}
             <Link key={currency.uuid} to={`/crypto/${currency.uuid}`}>
               <div className="lol">
-                <div class="crypto-cardd">
-                  <div class="crypto-header">
+                <div className="crypto-cardd">
+                  <div className="crypto-header">
                     <img className="crypto-image" src={currency.iconUrl} />
-                    <p class="name">{currency.name} #{currency.rank}</p>
+                    <p className="name">{currency.name} #{currency.rank}</p>
                   </div>
-                  <div class="crypto-card-stats">
+                  <div className="crypto-card-stats">
                     <div>
-                      <p class="card-title">Price</p>
-                      <p class="stat-title">{millify(currency.price)}</p>
+                      <p className="card-title">Price</p>
+                      <p className="stat-title">{millify(currency.price)}</p>
                     </div>
                     <div>
-                      <p class="card-title">Market Cap</p>
-                      <p class="stat-title">{millify(currency.marketCap)}</p>
+                      <p className="card-title">Market Cap</p>
+                      <p className="stat-title">{millify(currency.marketCap)}</p>
                     </div>
                     <div>
-                      <p class="card-title">Daily Change</p>
-                      <p class="stat-title">{currency.change}%</p>
+                      <p className="card-title">Daily Change</p>
+                      <p className="stat-title">{currency.change}%</p>
                     </div>
                   </div>
                 </div>
