@@ -1,9 +1,7 @@
 
 import React from 'react';
 import { Line } from 'react-chartjs-2';
-import { Col, Row, Typography } from 'antd';
-
-const { Title } = Typography;
+import { Col, Row } from 'antd';
 
 const LineChart = ({ coinHistory, currentPrice, coinName }) => {
   const coinPrice = [];
@@ -50,7 +48,7 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
           <p level={5} className="current-price">Current {coinName} Price: $ {currentPrice}</p>
         </Col>
       </Row>
-      <Line className='crypto-chart' data={data} options={options} />
+      <Line className="crypto-chart" data={data} options={options} />
     </>
   );
 };
