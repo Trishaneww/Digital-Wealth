@@ -8,6 +8,7 @@ import icon from '../images/digital-wealth.png';
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(true);
   const [screenSize, setScreenSize] = useState(undefined);
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth);
@@ -28,7 +29,7 @@ const Navbar = () => {
   }, [screenSize]);
 
   return (
-    <div className="nav-container">
+    <div className={darkMode ? "dark-mode" : "nav-container"}>
       <div className="logo-container">
         <Avatar src={icon} size="large" />
         <a class ='logo' href="/">Digital Wealth</a>
@@ -42,6 +43,7 @@ const Navbar = () => {
           <a class ='a' href="/news">{<StarOutlined />} WatchList</a>
           <a class ='a' href="/news">{<LoginOutlined />} Login</a>
           <a class ='a' href="/news">{<LogoutOutlined />} Logout</a>
+          
       </Menu>
       )}
     </div>

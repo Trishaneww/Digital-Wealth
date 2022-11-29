@@ -17,10 +17,15 @@
      color: var(--pink) !important;
  }
  
- .app{
+ #light-mode{
      display: flex;
      overflow: hidden;
  }
+
+ #dark-mode{
+    display: flex;
+    overflow: hidden;
+}
  
  .navbar{
      flex: 0.2;
@@ -44,7 +49,7 @@
      border-radius: 10%;
  }
  
- .news-border {
+ #dark-mode .news-border {
      background-image: linear-gradient(96.28deg,#ddcfff,#b46fc1 99.28%);
      width:340px;
      height: 350px;
@@ -53,7 +58,76 @@
      border-radius: 10%;
      transition: transform 200ms;
  }
+
+ #light-mode .news-border {
+    background-image: linear-gradient(96.28deg,#ddcfff,#b46fc1 99.28%);
+    width:340px;
+    height: 350px;
+    text-align:center;
+    padding:4px;
+    border-radius: 10%;
+    transition: transform 200ms;
+}
  
+.crypto-cardd {
+    background-color:#352b5d;
+    color: white;
+    width:100%;
+    height: 220px;
+    text-align:center;
+    border-radius: 10%;
+    font-family: Inter, sans-serif;
+    font-weight: 800;
+    transition: transform 200ms;
+}
+
+#light-mode .crypto-cardd {
+    background-color:white;
+    color: black;
+    width:100%;
+    height: 220px;
+    text-align:center;
+    border-radius: 10%;
+    font-family: Inter, sans-serif;
+    font-weight: 800;
+    transition: transform 200ms;
+}
+
+.name {
+    margin-top: 6%;
+    font-size: 23px;
+    margin-bottom: 0%;
+}
+
+.card-title {
+    color:#726e86;
+    font-size: 17px;
+}
+
+.news-desc {
+   color:#726e86;
+   font-size: 15px;
+}
+
+.reference-title {
+   color: white;
+   font-size: 12px;
+}
+
+#light-mode .stat-title {
+    font-size: 25px;
+}
+
+.news-title {
+    font-size: 20px;
+    color: white;
+    text-align:left;
+}
+
+.crypto-cardd:hover, .crypto-carddd:hover {
+    transform: scale(1.1,1.1);
+}
+
  .news-image {
     float: left;
     width:  10vh;
@@ -115,66 +189,11 @@
      color: white;
  }
  
- .crypto-cardd {
-     background-color:#352b5d;
-     color: white;
-     width:100%;
-     height: 220px;
-     text-align:center;
-     border-radius: 10%;
-     font-family: Inter, sans-serif;
-     font-weight: 800;
-     transition: transform 200ms;
- }
- 
- .crypto-carddd {
-     background-color:#352b5d;
-     color: white;
-     width:100%;
-     height: 342px;
-     padding:20px;
-     text-align:center;
-     border-radius: 10%;
-     font-family: Inter, sans-serif;
-     font-weight: 800;
-     transition: transform 200ms;
-     
- }
- 
- .crypto-cardd:hover, .crypto-carddd:hover {
-     transform: scale(1.1,1.1);
- }
  
  .ban {
      margin-left: 30px;
  }
  
- .card-title {
-     color:#726e86;
-     font-size: 17px;
- }
-
- .news-desc {
-    color:#726e86;
-    font-size: 15px;
-}
-
-.reference-title {
-    color: white;
-    font-size: 12px;
-}
-
- 
- .stat-title {
-     font-size: 25px;
-     color: white;
- }
- 
- .news-title {
-     font-size: 20px;
-     color: white;
-     text-align:left;
- }
  
  .crypto-header {
      display: flex;
@@ -212,11 +231,7 @@
      margin-bottom: 0;
  }
  
- .name {
-     margin-top: 6%;
-     font-size: 23px;
-     margin-bottom: 0%;
- }
+ 
  
  .search-crypto input {
      text-align: center;
@@ -230,16 +245,21 @@
  
  .routes{
      padding: 50px;
-     background-color: #170f34 
+     background-color: #170f34;
  }
  
+#light-mode .routes {
+    padding: 50px;
+    background-color: #bcb2e2;
+}
+
  .nav-container{
      position: fixed;
      left: 0;
      margin: 10px;
      height: 100vh;
      margin: 0px;
-     background-color: #352b5d
+     background-color: #352b5d;
  }
  
  .logo-container{
@@ -295,7 +315,7 @@
  }
  
  @media screen and (max-width:800px){
-     .app{
+     #light-mode {
          flex-direction: column;
          overflow: hidden;
      }
@@ -656,3 +676,81 @@
      font-weight: 800;
  }
 
+/*-------------------------------------------- Switch Slider ------------------------------------*/
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 14px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #ddcfff;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196f3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  .switch-checkbox {
+    padding: 10px;
+  }

@@ -19,7 +19,7 @@ const Homepage = () => {
   return (
     <>
       <Row  gutter={[32, 32]}>
-        <div class="global-stats">
+        <div class="global-stats" >
         <Col className="space" span={4}>
           <div>
             <p class="title">Cryptocurrencies</p>

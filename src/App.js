@@ -1,12 +1,15 @@
 import React from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
 import { Layout, Typography, Space } from 'antd';
-
+import { useState, useEffect } from 'react';
 import { Exchanges, Homepage, News, Cryptocurrencies, CryptoDetails, Navbar } from './components';
 import './App.css';
 
-const App = () => (
-  <div className="app">
+const App = () => {
+  const [lightMode, setLightMode] = useState(false);
+
+  return (
+  <div id={lightMode ? "light-mode" : "dark-mode"}>
     <div className="navbar">
       <Navbar />
     </div>
@@ -40,9 +43,16 @@ const App = () => (
           {/* <Link style={{ color: 'white', textAlign: 'center' }} to="/exchanges">Exchanges</Link> */}
           <Link style={{ color: 'white', textAlign: 'center' }} to="/news">News</Link>
         </Space>
+        <div className="switch-checkbox">
+          <label className="switch">
+            <input type="checkbox" onChange={() => setLightMode(!lightMode)} />
+            <span className="slider round"> </span>
+          </label>
+        </div>
       </div>
     </div>
   </div>
 );
+}
 
 export default App;
