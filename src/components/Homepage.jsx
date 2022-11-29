@@ -1,6 +1,6 @@
 import React from 'react';
 import millify from 'millify';
-import { Typography} from 'antd';
+import { Typography } from 'antd';
 import { Link } from 'react-router-dom';
 import { PlusOutlined } from '@ant-design/icons';
 import { useGetCryptosQuery } from '../services/cryptoApi';
@@ -19,37 +19,37 @@ const Homepage = () => {
   return (
     <>
       <div>
-        <div className="global-stats" >
-        <div className="space">
-          <div>
-            <p className="title">Cryptocurrencies</p>
-            <p className="num">{globalStats.total}</p>
+        <div className="global-stats">
+          <div className="space">
+            <div>
+              <p className="title">Cryptocurrencies</p>
+              <p className="num">{globalStats.total}</p>
+            </div>
           </div>
-        </div>
-        <div className="space">
-          <div className="ban">
-            <p className="title">Exchanges</p>
-            <p className="num">{millify(globalStats.totalExchanges)}</p>
+          <div className="space">
+            <div className="ban">
+              <p className="title">Exchanges</p>
+              <p className="num">{millify(globalStats.totalExchanges)}</p>
+            </div>
           </div>
-        </div>
-        <div className="space">
-          <div>
-            <p className="title">Market Cap</p>
-            <p className="num">{`$${millify(globalStats.totalMarketCap)}`}</p>
+          <div className="space">
+            <div>
+              <p className="title">Market Cap</p>
+              <p className="num">{`$${millify(globalStats.totalMarketCap)}`}</p>
+            </div>
           </div>
-        </div>
-        <div className="space">
-          <div>
-            <p className="title">24h Volume</p>
-            <p className="num">{`$${millify(globalStats.total24hVolume)}`}</p>
+          <div className="space">
+            <div>
+              <p className="title">24h Volume</p>
+              <p className="num">{`$${millify(globalStats.total24hVolume)}`}</p>
+            </div>
           </div>
-        </div>
-        <div className="space">
-          <div>
-            <p className="title">Markets</p>
-            <p className="num">{millify(globalStats.totalMarkets)}</p>
+          <div className="space">
+            <div>
+              <p className="title">Markets</p>
+              <p className="num">{millify(globalStats.totalMarkets)}</p>
+            </div>
           </div>
-        </div>
         </div>
       </div>
 

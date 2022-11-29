@@ -9,7 +9,7 @@ import { useGetCryptoDetailsQuery, useGetCryptoHistoryQuery } from '../services/
 import Loader from './Loader';
 import LineChart from './LineChart';
 
-const { Title, Text } = Typography;
+const { Title } = Typography;
 const { Option } = Select;
 
 const CryptoDetails = () => {
@@ -22,7 +22,6 @@ const CryptoDetails = () => {
   if (isFetching) return <Loader />;
 
   const time = ['3h', '24h', '7d', '30d', '1y', '3m', '3y', '5y'];
-
 
   const stats = [
     { title: 'Price to USD', value: `$ ${cryptoDetails?.price && millify(cryptoDetails?.price)}`, icon: <DollarCircleOutlined /> },
@@ -43,7 +42,7 @@ const CryptoDetails = () => {
   return (
     <Col className="coin-detail-container">
       <Col className="coin-heading-container">
-        <p class="coin-name">
+        <p className="coin-name">
           {data?.data?.coin.name} ({data?.data?.coin.symbol}) Price
         </p>
         <p>{cryptoDetails.name} live price in US Dollar (USD). View value statistics, market cap and supply.</p>
@@ -56,7 +55,7 @@ const CryptoDetails = () => {
         <Col className="coin-value-statistics">
           <Col className="coin-value-statistics-heading">
             <Title level={3} className="coin-details-heading">{cryptoDetails.name} Value Statistics</Title>
-            <p class="overview">An overview showing the statistics of {cryptoDetails.name}, such as the base and quote currency, the rank, and trading volume.</p>
+            <p className="overview">An overview showing the statistics of {cryptoDetails.name}, such as the base and quote currency, the rank, and trading volume.</p>
           </Col>
           {stats.map(({ icon, title, value }) => (
             <div className="coin-stats">
@@ -71,7 +70,7 @@ const CryptoDetails = () => {
         <Col className="other-stats-info">
           <Col className="coin-value-statistics-heading">
             <Title level={3} className="coin-details-heading">Other Stats Info</Title>
-            <p class="overview">An overview showing the statistics of {cryptoDetails.name}, such as the base and quote currency, the rank, and trading volume.</p>
+            <p className="overview">An overview showing the statistics of {cryptoDetails.name}, such as the base and quote currency, the rank, and trading volume.</p>
           </Col>
           {genericStats.map(({ icon, title, value }) => (
             <div className="coin-stats">
@@ -87,7 +86,7 @@ const CryptoDetails = () => {
       <Col className="coin-desc-link">
         <Row className="coin-desc">
           <p level={3} className="coin-details-heading">What is {cryptoDetails.name}?</p>
-          <p class="coin-description">{HTMLReactParser(cryptoDetails.description)}</p>
+          <p className="coin-description">{HTMLReactParser(cryptoDetails.description)}</p>
         </Row>
         <Col className="coin-links">
           <Title level={3} className="coin-details-heading">{cryptoDetails.name} Links</Title>
@@ -102,6 +101,5 @@ const CryptoDetails = () => {
     </Col>
   );
 };
-
 
 export default CryptoDetails;
