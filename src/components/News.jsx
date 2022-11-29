@@ -35,22 +35,22 @@ const News = ({ simplified }) => {
       {cryptoNews.value.map((news, i) => (
         <Col xs={24} sm={12} lg={8} key={i}>
           <div className="news-container">
-          <div className="news-border">
-            <div className="crypto-carddd">
-              <a href={news.url} target="_blank" rel="noreferrer">
-              <div className="news-image-container">
-                <h1 className="news-title" level={4}>{news.name}</h1>
-                <img className="news-image" src={news?.image?.thumbnail?.contentUrl || demoImage} />
-              </div>
-              <p className="news-desc">{news.description.length > 100 ? `${news.description.substring(0, 100)}...` : news.description}</p>
-              <div className="news-card-stats">
-                    <img className="news-outlet-image" src={news.provider[0]?.image?.thumbnail?.contentUrl || demoImage}  />
+            <div className="news-border">
+              <div className="crypto-carddd">
+                <a href={news.url} target="_blank" rel="noreferrer">
+                  <div className="news-image-container">
+                    <h1 className="news-title" level={4}>{news.name}</h1>
+                    <img className="news-image" src={news?.image?.thumbnail?.contentUrl || demoImage} />
+                  </div>
+                  <p className="news-desc">{news.description.length > 100 ? `${news.description.substring(0, 100)}...` : news.description}</p>
+                  <div className="news-card-stats">
+                    <img className="news-outlet-image" src={news.provider[0]?.image?.thumbnail?.contentUrl || demoImage} />
                     <p className="reference-title">{moment(news.datePublished).startOf('ss').fromNow()}</p>
+                  </div>
+                  {/* <p className="card-title">{news.provider[0]?.name}</p> */}
+                </a>
               </div>
-              {/* <p className="card-title">{news.provider[0]?.name}</p> */}
-            </a>
-          </div>
-          </div>
+            </div>
           </div>
         </Col>
       ))}

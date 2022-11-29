@@ -50,7 +50,7 @@ const Homepage = () => {
               <p className="num">{millify(globalStats.totalMarkets)}</p>
             </div>
           </div>
-          </div>
+        </div>
       </div>
 
       <div className="home-heading-container">
