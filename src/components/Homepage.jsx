@@ -18,40 +18,40 @@ const Homepage = () => {
 
   return (
     <>
-      <Row  gutter={[32, 32]}>
+      <div>
         <div class="global-stats" >
-        <Col className="space" span={4}>
+        <div className="space">
           <div>
             <p class="title">Cryptocurrencies</p>
             <p class="num">{globalStats.total}</p>
           </div>
-        </Col>
-        <Col className="space" span={4}>
+        </div>
+        <div className="space">
           <div class="ban">
             <p class="title">Exchanges</p>
             <p class="num">{millify(globalStats.totalExchanges)}</p>
           </div>
-        </Col>
-        <Col className="space" span={4}>
+        </div>
+        <div className="space">
           <div>
             <p class="title">Market Cap</p>
             <p class="num">{`$${millify(globalStats.totalMarketCap)}`}</p>
           </div>
-        </Col>
-        <Col className="space" span={4}>
+        </div>
+        <div className="space">
           <div>
             <p class="title">24h Volume</p>
             <p class="num">{`$${millify(globalStats.total24hVolume)}`}</p>
           </div>
-        </Col>
-        <Col className="space" span={4}>
+        </div>
+        <div className="space">
           <div>
             <p class="title">Markets</p>
             <p class="num">{millify(globalStats.totalMarkets)}</p>
           </div>
-        </Col>
         </div>
-      </Row>
+        </div>
+      </div>
 
       <div className="home-heading-container">
         <h1 class="home-title">Top 10 Cryptos In The World</h1>

@@ -12,11 +12,6 @@
  .link {
      background-color: white;
  }
-
- .plus-icon {
-    color:#ba00da;
-    height: 100px;
- }
  
  a:hover{
      color: var(--pink) !important;
@@ -122,29 +117,6 @@
     transition: transform 200ms;
     padding: 15px;
 }
-
-.news-title {
-    font-size: 20px;
-    color: white;
-    text-align:left;
-}
-
-#light-mode .news-title {
-    color: black;
-    font-size: 20px;
-    text-align:left;
-}
-
-.reference-title {
-    color: white;
-    font-size: 12px;
- }
-
-#light-mode .reference-title {
-    color: black;
-    font-size: 12px;
- }
-
  /*-------------------------------------------------------- Navbar -------------------------------------------------------- */
  .a {
     background-color: #352b5d;
@@ -195,6 +167,7 @@
     width: 100%;
     background-color:#ddcfff;
 }
+
 .logo{
     color:white;
     font-weight: 700;
@@ -215,6 +188,44 @@
     border: none !important;
 }
 
+ /*-------------------------------------------------------- News Page -------------------------------------------------------- */
+
+ .news-title {
+    font-size: 20px;
+    color: white;
+    text-align:left;
+}
+
+#light-mode .news-title {
+    color: black;
+    font-size: 20px;
+    text-align:left;
+}
+
+.reference-title {
+    color: white;
+    font-size: 12px;
+ }
+
+#light-mode .reference-title {
+    color: black;
+    font-size: 12px;
+ }
+
+ .news-image {
+    float: left;
+    width:  10vh;
+    height: 10vh;
+    object-fit: cover;
+ }
+
+ .news-outlet-image {
+    float: left;
+    min-width:  40px;
+    height: 40px;
+    object-fit: cover;
+ }
+ 
 .name {
     margin-top: 6%;
     font-size: 23px;
@@ -240,6 +251,8 @@
     font-size: 25px;
 }
 
+ /*-------------------------------------------------------- HomepPage -------------------------------------------------------- */
+
 #light-mode .routes {
     padding: 50px;
     background-color: white;
@@ -249,20 +262,7 @@
     transform: scale(1.1,1.1);
 }
 
- .news-image {
-    float: left;
-    width:  10vh;
-    height: 10vh;
-    object-fit: cover;
- }
 
- .news-outlet-image {
-    float: left;
-    min-width:  40px;
-    height: 40px;
-    object-fit: cover;
- }
- 
  .crypto-chart {
      background-color:#352b5d;
      width:340px;
@@ -306,6 +306,22 @@
      align-content: center;
  }
 
+ .space {
+    margin-right: 4%;
+}
+ 
+ .title {
+     font-family: Inter, sans-serif;
+     font-weight: 800;
+     font-size: 30px;
+     text-align: center;
+     color: white;
+ }
+ 
+ .ban {
+     margin-left: 30px;
+ }
+
  #light-mode .global-stats {
     display: flex;
     flex-direction: row;
@@ -318,27 +334,6 @@
     justify-content: center;
     align-content: center;
 }
-
-
- .space {
-     width: 20px;
-     margin-left: 4px;
-     margin-right: 4px;
- }
- 
- .title {
-     font-family: Inter, sans-serif;
-     font-weight: 800;
-     font-size: 30px;
-     text-align: center;
-     color: white;
- }
- 
- 
- .ban {
-     margin-left: 30px;
- }
- 
  
  .crypto-header {
      display: flex;
@@ -377,7 +372,6 @@
  }
  
  
- 
  .search-crypto input {
      text-align: center;
      background-color: #352b5d;
@@ -387,19 +381,29 @@
      border: none;
      color:#726e86;
  }
+
+ #light-mode .search-crypto input {
+    text-align: center;
+    background-color: white;
+    border: 3.5px solid #ddcfff;
+    border-radius: 30px;
+    width: 300px;
+    height: 40px;
+    color:white;
+}
  
- .routes{
+.routes{
      padding: 50px;
      background-color: #170f34;
- }
+}
 
  
- .loader{
+.loader{
      height: 81vh;
      display: flex;
      justify-content: center;
      align-items: center;
- }
+}
  
  @media screen and (max-width:1300px){
      .main{
@@ -424,6 +428,11 @@
          flex-direction: column;
          overflow: hidden;
      }
+
+     #dark-mode {
+        flex-direction: column;
+        overflow: hidden;
+    }
  
      .navbar{
          flex: 1;
@@ -457,17 +466,27 @@
          font-size: 1.3rem !important;
      }
      .global-stats {
-         flex-direction: column;
-         height: 800px;
-         justify-content: center;
-         align-content: center;
-     }
-     .num {
-         font-size: 30px;
-     }
-     .title {
-         font-size: 20px;
-     }
+        display: flex;
+        background-color:black;
+        width:90%;
+        height: 500px;
+        border-radius: 5%;
+        margin-left: 5%;
+        justify-content: center;
+        align-content: center;
+    }
+    .title {
+        font-size: 20px;
+    }
+    .num {
+        font-size: 30px;
+    }
+    .ban {
+        margin-left: 30px;
+    }
+    .space {
+        margin-bottom: 5%;
+    }
      .routes{
          padding: 15px;
      }
@@ -475,6 +494,28 @@
          margin:0px;
          margin-bottom: 30px;
      }
+     .news-border {
+        background-image: linear-gradient(96.28deg,#ddcfff,#b46fc1 99.28%);
+        width:320px;
+        height: 510px;
+        text-align:center;
+        padding:4px;
+        border-radius: 10%;
+        transition: transform 200ms;
+        margin-left:4%;
+    }   
+     .crypto-carddd {
+        background-color:#352b5d;
+        color: white;
+        width:100%;
+        height: 502px;
+        text-align:center;
+        border-radius: 10%;
+        font-family: Inter, sans-serif;
+        font-weight: 800;
+        transition: transform 200ms;
+        padding: 15px;
+    }
  }
  
  .coin-detail-container{
@@ -631,11 +672,11 @@
      }
  }
  
- .select-news{
+ .select-news {
      width: 180px;
  }
  
- .news-card{
+ .news-card {
      min-height: 300px !important;
  }
  
@@ -648,12 +689,12 @@
  width: 70%;
  }
  
- .news-image-container .img{
+ .news-image-container .img {
      width:100px;
      height:100px;
  }
  
- .news-card p{
+ .news-card p {
      color: black;
      margin: 10px 0px !important;
  }
@@ -677,24 +718,7 @@
  .chart-title{
      color: white !important;
  }
- 
- .price-container{
-     display: flex !important;
-     gap: 20px !important;
-     align-items: center !important;
-     flex-wrap: wrap !important;
- }
- 
- .price-change{
-     font-weight: 900 !important;
-     color:white;
- }
- 
- .current-price{
-     margin-top: 0px !important;
-     font-weight: 900 !important;
-     color:white;
- }
+
  
  .home-heading-container{
      display: flex;
@@ -703,25 +727,10 @@
      margin-top: 40px;
  }
  
- .show-more{
-     margin-top: 0px !important;
- }
- 
- .exchange-image{
-     margin: 0px 10px !important;
- }
  
  .search-crypto{
      margin: 20px auto 30px auto;
      width: 250px;
- }
- 
- .crypto-card-container{
-     min-height: 65vh !important;
- }
- 
- .crypto-card{
-     min-width: 250px;
  }
  
  .select-timeperiod{
@@ -729,26 +738,12 @@
      margin-top: 20px !important;
  }
  
- .footer {
-     color: white;
-     background-color: #170f34;
-     display: flex;
-     flex-direction: column;
-     padding: 20px;
-     align-items: center;
- }
- 
- .footer-info {
-     color: white;
-     text-align: center; 
- }
- 
  .menu {
      display:flex;
      flex-direction: column;
  }
  
- 
+
  .home-title{
      font-family: Inter, sans-serif;
      font-weight: 800;
@@ -774,8 +769,48 @@
      font-weight: 800;
  }
 
-/*-------------------------------------------- Switch Slider ------------------------------------*/
+/*------------------------------------------------------ Footer -------------------------------------------------*/
 
+ .footer {
+    color: white;
+    background-color: #170f34;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+}
+
+#light-mode .footer {
+    color: white;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+}
+
+.footer-header {
+    font-size: 17px;
+    color: white;
+    text-align: center; 
+}
+
+#light-mode .footer-header {
+    font-size: 17px;
+    color: white;
+    text-align: center; 
+}
+
+.footer-info {
+    color: white;
+    text-align: center; 
+}
+
+#light-mode .footer-info {
+    color: #b3b5f1;
+    text-align: center; 
+}
+/*-------------------------------------------- Switch Slider ------------------------------------*/
 
 .switch {
     position: relative;

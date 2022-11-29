@@ -37,6 +37,7 @@ const News = ({ simplified }) => {
       )}
       {cryptoNews.value.map((news, i) => (
         <Col xs={24} sm={12} lg={8} key={i}>
+          <div class="news-container">
           <div class="news-border">
           <div class="crypto-carddd">
             <a href={news.url} target="_blank" rel="noreferrer">
@@ -51,6 +52,7 @@ const News = ({ simplified }) => {
               </div>
               {/* <p class="card-title">{news.provider[0]?.name}</p> */}
             </a>
+          </div>
           </div>
           </div>
         </Col>

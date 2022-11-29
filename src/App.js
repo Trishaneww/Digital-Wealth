@@ -33,15 +33,15 @@ const App = () => {
         </div>
       </div>
       <div className="footer">
-        <Typography.Title level={5} style={{ color: 'white', textAlign: 'center' }}>Copyright ©  
-          <Link style={{ color: 'white', textAlign: 'center' }} to="/">
-             2022 Digital Wealth Inc. 
+        <Typography.Title level={5} class="footer-header">  
+          <Link class="footer-info" to="/">
+          Copyright ©2022 Digital Wealth Inc. 
           </Link>
         </Typography.Title>
         <Space>
-          <Link style={{ color: 'white', textAlign: 'center' }} to="/">Home</Link>
+          <Link class="footer-info" to="/">Home</Link>
           {/* <Link style={{ color: 'white', textAlign: 'center' }} to="/exchanges">Exchanges</Link> */}
-          <Link style={{ color: 'white', textAlign: 'center' }} to="/news">News</Link>
+          <Link  class="footer-info"  to="/news">News</Link>
         </Space>
         <div className="switch-checkbox">
           <label className="switch">
