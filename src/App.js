@@ -10,12 +10,12 @@ const App = () => {
 
   return (
   <div id={lightMode ? 'light-mode' : 'dark-mode'}>
-      <div className='navbar'>
+      <div className="navbar">
         <Navbar />
       </div>
-    <div className='main'>
+    <div className="main">
       <div>
-        <div className='routes'>
+        <div className="routes">
           <Switch>
             <Route exact path='/'>
               <Homepage />
@@ -34,12 +34,12 @@ const App = () => {
       </div>
       <div className='footer'>
         <Typography.Title level={5} class='footer-header'>  
-          <Link class='footer-info' to='/'>Copyright ©2022 Digital Wealth Inc.</Link>
+          <Link class="footer-info" to='/'>Copyright ©2022 Digital Wealth Inc.</Link>
         </Typography.Title>
         <Space>
-          <Link class='footer-info' to='/'>Home</Link>
+          <Link class="footer-info" to='/'>Home</Link>
           {/* <Link style={{ color: 'white', textAlign: 'center' }} to='/exchanges'>Exchanges</Link> */}
-          <Link class='footer-info' to='/news'>News</Link>
+          <Link class="footer-info" to='/news'>News</Link>
         </Space>
         <div className='switch-checkbox'>
           <label className='switch'>

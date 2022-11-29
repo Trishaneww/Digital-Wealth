@@ -36,12 +36,12 @@ const Navbar = () => {
       </div>
       {activeMenu && (
       <Menu className='menu'>
-          <a className ='a' href='/'> {<HomeOutlined />} Home</a>
-          <a className ='a' href='/cryptocurrencies'> {<FundOutlined />} Cryptocurrencies</a>
-          <a className ='a' href='/news'> {<BulbOutlined />} News</a>
-          <a className ='a' href='/news'> {<StarOutlined />} WatchList</a>
-          <a className ='a' href='/news'> {<LoginOutlined />} Login</a>
-          <a className ='a' href='/news'> {<LogoutOutlined />} Logout</a>
+          <a className='a' href="/"> <HomeOutlined /> Home</a>
+          <a className='a' href="/cryptocurrencies"> <FundOutlined /> Cryptocurrencies</a>
+          <a className='a' href="/news"> <BulbOutlined /> News</a>
+          <a className='a' href="/news"> <StarOutlined /> WatchList</a>
+          <a className='a' href="/news"> <LoginOutlined /> Login</a>
+          <a className='a' href="/news"> <LogoutOutlined /> Logout</a>
           
       </Menu>
       )}
