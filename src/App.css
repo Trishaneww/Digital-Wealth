@@ -17,10 +17,15 @@
      color: var(--pink) !important;
  }
  
- .app{
+ #light-mode{
      display: flex;
      overflow: hidden;
  }
+
+ #dark-mode{
+    display: flex;
+    overflow: hidden;
+}
  
  .navbar{
      flex: 0.2;
@@ -32,10 +37,6 @@
      width: 100%;
  }
  
- .stats {
-     color: white;
- }
- 
  .lol {
      background-image: linear-gradient(96.28deg,#ddcfff,#b46fc1 99.28%);
      width:340px;
@@ -44,16 +45,169 @@
      border-radius: 10%;
  }
  
- .news-border {
+.news-border {
      background-image: linear-gradient(96.28deg,#ddcfff,#b46fc1 99.28%);
-     width:340px;
-     height: 350px;
+     width:480px;
+     height: 370px;
      text-align:center;
      padding:4px;
      border-radius: 10%;
      transition: transform 200ms;
  }
+
+ #light-mode .news-border {
+    background-image: linear-gradient(96.28deg,#ddcfff,#b46fc1 99.28%);
+    width:480px;
+    height: 370px;
+    text-align:center;
+    padding:4px;
+    border-radius: 10%;
+    transition: transform 200ms;
+}
  
+.crypto-cardd {
+    background-color:#352b5d;
+    color: white;
+    width:100%;
+    height: 220px;
+    text-align:center;
+    border-radius: 10%;
+    font-family: Inter, sans-serif;
+    font-weight: 800;
+    transition: transform 200ms;
+}
+
+#light-mode .crypto-cardd {
+    background-color:white;
+    color: black;
+    width:100%;
+    height: 220px;
+    text-align:center;
+    border-radius: 10%;
+    font-family: Inter, sans-serif;
+    font-weight: 800;
+    transition: transform 200ms;
+}
+
+.crypto-carddd {
+    background-color:#352b5d;
+    color: white;
+    width:100%;
+    height: 362px;
+    text-align:center;
+    border-radius: 10%;
+    font-family: Inter, sans-serif;
+    font-weight: 800;
+    transition: transform 200ms;
+    padding: 15px;
+}
+
+#light-mode .crypto-carddd {
+    background-color: white;
+    width:100%;
+    height: 362px;
+    text-align:center;
+    border-radius: 10%;
+    font-family: Inter, sans-serif;
+    font-weight: 800;
+    transition: transform 200ms;
+    padding: 15px;
+}
+ /*-------------------------------------------------------- Navbar -------------------------------------------------------- */
+ .a {
+    background-color: #352b5d;
+    color:#726e86;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 20px 23px 20px;
+}
+
+#light-mode .a {
+    background: #ddcfff;
+    color:white;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 20px 23px 20px;
+}
+
+.nav-container{
+    position: fixed;
+    left: 0;
+    margin: 10px;
+    height: 100vh;
+    margin: 0px;
+    background-color: #352b5d;
+}
+
+#light-mode .nav-container{
+    position: fixed;
+    left: 0;
+    margin: 10px;
+    height: 100vh;
+    margin: 0px;
+    background-color: #ddcfff;
+}
+
+.logo-container{
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    width: 100%;
+    background-color:#352b5d;
+}
+
+#light-mode .logo-container{
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    width: 100%;
+    background-color:#ddcfff;
+}
+
+.logo{
+    color:white;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.logo a{
+   color: white;
+}
+
+.menu-control-container{
+    display: none !important;
+    position: absolute !important;
+    right: 10px !important;
+    top: 25px !important;
+    font-size: 1.2rem !important;
+    background-color: var(--bgSecondary) !important;
+    border: none !important;
+}
+
+ /*-------------------------------------------------------- News Page -------------------------------------------------------- */
+
+ .news-title {
+    font-size: 20px;
+    color: white;
+    text-align:left;
+}
+
+#light-mode .news-title {
+    color: black;
+    font-size: 20px;
+    text-align:left;
+}
+
+.reference-title {
+    color: white;
+    font-size: 12px;
+ }
+
+#light-mode .reference-title {
+    color: black;
+    font-size: 12px;
+ }
+
  .news-image {
     float: left;
     width:  10vh;
@@ -68,13 +222,41 @@
     object-fit: cover;
  }
  
- .crypto-chart {
-     background-color:#352b5d;
-     width:340px;
-     text-align:center;
-     padding:4px;
-     border-radius: 30px;
- }
+.name {
+    margin-top: 6%;
+    font-size: 23px;
+    margin-bottom: 0%;
+}
+
+.card-title {
+    color:#726e86;
+    font-size: 17px;
+}
+
+.news-desc {
+   color:#726e86;
+   font-size: 15px;
+}
+
+
+.stat-title {
+    font-size: 25px;
+}
+
+#light-mode .stat-title {
+    font-size: 25px;
+}
+
+ /*-------------------------------------------------------- HomepPage -------------------------------------------------------- */
+
+#light-mode .routes {
+    padding: 50px;
+    background-color: white;
+}
+
+.crypto-cardd:hover, .crypto-carddd:hover {
+    transform: scale(1.1,1.1);
+}
  
  .num {
      font-family: Inter, sans-serif;
@@ -86,9 +268,19 @@
      -webkit-text-fill-color: transparent;
      -webkit-background-clip: text;
  }
+
+ #light-mode .num {
+    font-family: Inter, sans-serif;
+    font-weight: 800;
+    font-size: 50px;
+    text-align: center;
+    background: linear-gradient(
+             to bottom, #4600ea, #ba00da);
+     -webkit-text-fill-color: transparent;
+     -webkit-background-clip: text;
+}
  
  .global-stats {
-     /* background-image: linear-gradient(96.28deg,#899eff,#c328f6 99.28%); */
      display: flex;
      flex-direction: row;
      flex-wrap: wrap;
@@ -100,12 +292,10 @@
      justify-content: center;
      align-content: center;
  }
- 
+
  .space {
-     width: 20px;
-     margin-left: 4px;
-     margin-right: 4px;
- }
+    margin-right: 4%;
+}
  
  .title {
      font-family: Inter, sans-serif;
@@ -115,73 +305,144 @@
      color: white;
  }
  
- .crypto-cardd {
-     background-color:#352b5d;
-     color: white;
-     width:100%;
-     height: 220px;
-     text-align:center;
-     border-radius: 10%;
-     font-family: Inter, sans-serif;
-     font-weight: 800;
-     transition: transform 200ms;
- }
- 
- .crypto-carddd {
-     background-color:#352b5d;
-     color: white;
-     width:100%;
-     height: 342px;
-     padding:20px;
-     text-align:center;
-     border-radius: 10%;
-     font-family: Inter, sans-serif;
-     font-weight: 800;
-     transition: transform 200ms;
-     
- }
- 
- .crypto-cardd:hover, .crypto-carddd:hover {
-     transform: scale(1.1,1.1);
- }
- 
  .ban {
      margin-left: 30px;
  }
- 
- .card-title {
-     color:#726e86;
-     font-size: 17px;
+
+ #light-mode .global-stats {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #ddcfff;
+    width:90%;
+    height: 300px;
+    border-radius: 5%;
+    margin-left: 5%;
+    justify-content: center;
+    align-content: center;
  }
 
- .news-desc {
-    color:#726e86;
-    font-size: 15px;
-}
+ /*-------------------------------------------------------- CryptoDetails -------------------------------------------------------- */
 
-.reference-title {
+.stats {
     color: white;
-    font-size: 12px;
+    font-weight: 800;
 }
 
- 
- .stat-title {
-     font-size: 25px;
-     color: white;
- }
- 
- .news-title {
-     font-size: 20px;
-     color: white;
-     text-align:left;
- }
- 
- .crypto-header {
-     display: flex;
-     flex-direction: row;
-     align-content: center;
-     justify-content: center;
- }
+#light-mode .stats {
+    color: black;
+    font-weight: 800;
+}
+
+.coin-description {
+    color: white;
+}
+
+#light-mode .coin-description {
+    color: black;
+}
+
+.coin-stats{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+    font-size: 1rem;
+    opacity: 0.9;
+    padding: 20px;
+    color: white;
+}
+
+#light-mode .coin-stats{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+    font-size: 1rem;
+    opacity: 0.9;
+    padding: 20px;
+    color: black;
+}
+
+.overview {
+    font-family: Inter, sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    color: white;
+}
+
+.coin-heading-container {
+    font-weight: 800;
+    color: white;
+}
+
+.coin-name {
+    color: white;
+    font-weight: 800;
+}
+
+#light-mode .overview {
+    font-family: Inter, sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    color: black;
+}
+
+#light-mode .coin-heading-container {
+    font-weight: 800;
+    color: black;
+}
+
+#light-mode .coin-name {
+    color: black;
+    font-weight: 800;
+}
+
+.coin-details-heading{
+    font-weight: 700 !important;
+    margin-top: 20px !important;
+    color: white !important;
+}
+
+#light-mode .coin-details-heading{
+    font-weight: 700 !important;
+    margin-top: 20px !important;
+    color: black !important;
+}
+
+.link-name{
+    text-transform: capitalize;
+    font-size: 1rem;
+    color: white;
+}
+
+#light-mode .link-name{
+    text-transform: capitalize;
+    font-size: 1rem;
+    color: black;
+}
+
+.crypto-chart {
+    background-color:#352b5d;
+    width:340px;
+    text-align:center;
+    padding:4px;
+    border-radius: 30px;
+}
+
+#light-mode .crypto-chart {
+    background-color:white;
+    border: 4px solid #ddcfff;
+    width:340px;
+    text-align:center;
+    padding:4px;
+    border-radius: 30px;
+}
+
+.crypto-header {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
  
  .crypto-card-stats {
      display: flex;
@@ -212,11 +473,6 @@
      margin-bottom: 0;
  }
  
- .name {
-     margin-top: 6%;
-     font-size: 23px;
-     margin-bottom: 0%;
- }
  
  .search-crypto input {
      text-align: center;
@@ -227,54 +483,29 @@
      border: none;
      color:#726e86;
  }
+
+ #light-mode .search-crypto input {
+    text-align: center;
+    background-color: white;
+    border: 3.5px solid #ddcfff;
+    border-radius: 30px;
+    width: 300px;
+    height: 40px;
+    color:white;
+}
  
- .routes{
+.routes{
      padding: 50px;
-     background-color: #170f34 
- }
+     background-color: #170f34;
+}
+
  
- .nav-container{
-     position: fixed;
-     left: 0;
-     margin: 10px;
-     height: 100vh;
-     margin: 0px;
-     background-color: #352b5d
- }
- 
- .logo-container{
-     display: flex;
-     padding: 20px;
-     align-items: center;
-     width: 100%;
-     background-color:#352b5d;
- }
- .logo{
-     color:white;
-     font-weight: 700;
-     font-size: 30px;
- }
- 
- .logo a{
-    color: white;
- }
- 
- .menu-control-container{
-     display: none !important;
-     position: absolute !important;
-     right: 10px !important;
-     top: 25px !important;
-     font-size: 1.2rem !important;
-     background-color: var(--bgSecondary) !important;
-     border: none !important;
- }
- 
- .loader{
+.loader{
      height: 81vh;
      display: flex;
      justify-content: center;
      align-items: center;
- }
+}
  
  @media screen and (max-width:1300px){
      .main{
@@ -295,10 +526,15 @@
  }
  
  @media screen and (max-width:800px){
-     .app{
+     #light-mode {
          flex-direction: column;
          overflow: hidden;
      }
+
+     #dark-mode {
+        flex-direction: column;
+        overflow: hidden;
+    }
  
      .navbar{
          flex: 1;
@@ -332,17 +568,27 @@
          font-size: 1.3rem !important;
      }
      .global-stats {
-         flex-direction: column;
-         height: 800px;
-         justify-content: center;
-         align-content: center;
-     }
-     .num {
-         font-size: 30px;
-     }
-     .title {
-         font-size: 20px;
-     }
+        display: flex;
+        background-color:black;
+        width:90%;
+        height: 500px;
+        border-radius: 5%;
+        margin-left: 5%;
+        justify-content: center;
+        align-content: center;
+    }
+    .title {
+        font-size: 20px;
+    }
+    .num {
+        font-size: 30px;
+    }
+    .ban {
+        margin-left: 30px;
+    }
+    .space {
+        margin-bottom: 5%;
+    }
      .routes{
          padding: 15px;
      }
@@ -350,6 +596,28 @@
          margin:0px;
          margin-bottom: 30px;
      }
+     .news-border {
+        background-image: linear-gradient(96.28deg,#ddcfff,#b46fc1 99.28%);
+        width:320px;
+        height: 510px;
+        text-align:center;
+        padding:4px;
+        border-radius: 10%;
+        transition: transform 200ms;
+        margin-left:4%;
+    }   
+     .crypto-carddd {
+        background-color:#352b5d;
+        color: white;
+        width:100%;
+        height: 502px;
+        text-align:center;
+        border-radius: 10%;
+        font-family: Inter, sans-serif;
+        font-weight: 800;
+        transition: transform 200ms;
+        padding: 15px;
+    }
  }
  
  .coin-detail-container{
@@ -387,34 +655,10 @@
      color: var(--pink);
  }
  
- .coin-details-heading{
-     font-weight: 700 !important;
-     margin-top: 20px !important;
-     color: white !important;
- }
- 
- .coin-description {
-     color: white;
- }
- 
- .coin-stats{
-     display: flex;
-     justify-content: space-between;
-     border-bottom: 1px solid var(--border);
-     font-size: 1rem;
-     opacity: 0.9;
-     padding: 20px;
-     color: white;
- }
- 
  .coin-stats-name{
      display: flex;
      gap: 10px;
      font-size: 1rem;
- }
- 
- .stats{
-     font-weight: 800;
  }
  
  .coin-value-statistics-heading p{
@@ -464,12 +708,6 @@
      padding: 20px;
  }
  
- .link-name{
-     text-transform: capitalize;
-     font-size: 1rem;
-     color: white;
- }
- 
  .coin-link a{
      color: var(--pink);
      font-weight: 700;
@@ -479,6 +717,10 @@
  .coin-link:hover, .coin-stats:hover{
      background-color: rgba(255, 255, 255, 0.377);
  }
+
+ #light-mode .coin-link:hover, #light-mode .coin-stats:hover{
+    background-color: #ddcfff70;
+}
  
  @media screen and (max-width:1000px){
      .stats-container{
@@ -506,11 +748,11 @@
      }
  }
  
- .select-news{
+ .select-news {
      width: 180px;
  }
  
- .news-card{
+ .news-card {
      min-height: 300px !important;
  }
  
@@ -523,12 +765,12 @@
  width: 70%;
  }
  
- .news-image-container .img{
+ .news-image-container .img {
      width:100px;
      height:100px;
  }
  
- .news-card p{
+ .news-card p {
      color: black;
      margin: 10px 0px !important;
  }
@@ -549,28 +791,6 @@
      color: #b3b5f1;
  }
  
- .chart-title{
-     color: white !important;
- }
- 
- .price-container{
-     display: flex !important;
-     gap: 20px !important;
-     align-items: center !important;
-     flex-wrap: wrap !important;
- }
- 
- .price-change{
-     font-weight: 900 !important;
-     color:white;
- }
- 
- .current-price{
-     margin-top: 0px !important;
-     font-weight: 900 !important;
-     color:white;
- }
- 
  .home-heading-container{
      display: flex;
      justify-content: space-between;
@@ -578,25 +798,10 @@
      margin-top: 40px;
  }
  
- .show-more{
-     margin-top: 0px !important;
- }
- 
- .exchange-image{
-     margin: 0px 10px !important;
- }
  
  .search-crypto{
      margin: 20px auto 30px auto;
      width: 250px;
- }
- 
- .crypto-card-container{
-     min-height: 65vh !important;
- }
- 
- .crypto-card{
-     min-width: 250px;
  }
  
  .select-timeperiod{
@@ -604,33 +809,12 @@
      margin-top: 20px !important;
  }
  
- .footer {
-     color: white;
-     background-color: #170f34;
-     display: flex;
-     flex-direction: column;
-     padding: 20px;
-     align-items: center;
- }
- 
- .footer-info {
-     color: white;
-     text-align: center; 
- }
- 
  .menu {
      display:flex;
      flex-direction: column;
  }
  
- .a {
-     background-color: #352b5d;
-     color:#726e86;
-     font-size: 17px;
-     font-weight: 600;
-     padding: 20px 23px 20px;
- }
- 
+
  .home-title{
      font-family: Inter, sans-serif;
      font-weight: 800;
@@ -638,21 +822,122 @@
      text-align: center;
      color: white;
  }
- 
- .overview {
-     font-family: Inter, sans-serif;
-     font-weight: 800;
-     font-size: 30px;
-     color: white;
- }
- 
- .coin-heading-container {
-     font-weight: 800;
-     color: white;
- }
- 
- .coin-name {
-     color: white;
-     font-weight: 800;
- }
 
+/*------------------------------------------------------ Footer -------------------------------------------------*/
+
+ .footer {
+    color: white;
+    background-color: #170f34;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+}
+
+#light-mode .footer {
+    color: white;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+}
+
+.footer-header {
+    font-size: 17px;
+    color: white;
+    text-align: center; 
+}
+
+#light-mode .footer-header {
+    font-size: 17px;
+    color: white;
+    text-align: center; 
+}
+
+.footer-info {
+    color: white;
+    text-align: center; 
+}
+
+#light-mode .footer-info {
+    color: #b3b5f1;
+    text-align: center; 
+}
+/*-------------------------------------------- Switch Slider ------------------------------------*/
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 14px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #ddcfff;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196f3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  .switch-checkbox {
+    padding: 10px;
+  }
