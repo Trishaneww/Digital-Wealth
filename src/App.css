@@ -37,10 +37,6 @@
      width: 100%;
  }
  
- .stats {
-     color: white;
- }
- 
  .lol {
      background-image: linear-gradient(96.28deg,#ddcfff,#b46fc1 99.28%);
      width:340px;
@@ -52,7 +48,7 @@
 .news-border {
      background-image: linear-gradient(96.28deg,#ddcfff,#b46fc1 99.28%);
      width:480px;
-     height: 350px;
+     height: 370px;
      text-align:center;
      padding:4px;
      border-radius: 10%;
@@ -62,7 +58,7 @@
  #light-mode .news-border {
     background-image: linear-gradient(96.28deg,#ddcfff,#b46fc1 99.28%);
     width:480px;
-    height: 350px;
+    height: 370px;
     text-align:center;
     padding:4px;
     border-radius: 10%;
@@ -97,7 +93,7 @@
     background-color:#352b5d;
     color: white;
     width:100%;
-    height: 342px;
+    height: 362px;
     text-align:center;
     border-radius: 10%;
     font-family: Inter, sans-serif;
@@ -109,7 +105,7 @@
 #light-mode .crypto-carddd {
     background-color: white;
     width:100%;
-    height: 342px;
+    height: 362px;
     text-align:center;
     border-radius: 10%;
     font-family: Inter, sans-serif;
@@ -261,15 +257,6 @@
 .crypto-cardd:hover, .crypto-carddd:hover {
     transform: scale(1.1,1.1);
 }
-
-
- .crypto-chart {
-     background-color:#352b5d;
-     width:340px;
-     text-align:center;
-     padding:4px;
-     border-radius: 30px;
- }
  
  .num {
      font-family: Inter, sans-serif;
@@ -333,14 +320,129 @@
     margin-left: 5%;
     justify-content: center;
     align-content: center;
-}
- 
- .crypto-header {
-     display: flex;
-     flex-direction: row;
-     align-content: center;
-     justify-content: center;
  }
+
+ /*-------------------------------------------------------- CryptoDetails -------------------------------------------------------- */
+
+.stats {
+    color: white;
+    font-weight: 800;
+}
+
+#light-mode .stats {
+    color: black;
+    font-weight: 800;
+}
+
+.coin-description {
+    color: white;
+}
+
+#light-mode .coin-description {
+    color: black;
+}
+
+.coin-stats{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+    font-size: 1rem;
+    opacity: 0.9;
+    padding: 20px;
+    color: white;
+}
+
+#light-mode .coin-stats{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+    font-size: 1rem;
+    opacity: 0.9;
+    padding: 20px;
+    color: black;
+}
+
+.overview {
+    font-family: Inter, sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    color: white;
+}
+
+.coin-heading-container {
+    font-weight: 800;
+    color: white;
+}
+
+.coin-name {
+    color: white;
+    font-weight: 800;
+}
+
+#light-mode .overview {
+    font-family: Inter, sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    color: black;
+}
+
+#light-mode .coin-heading-container {
+    font-weight: 800;
+    color: black;
+}
+
+#light-mode .coin-name {
+    color: black;
+    font-weight: 800;
+}
+
+.coin-details-heading{
+    font-weight: 700 !important;
+    margin-top: 20px !important;
+    color: white !important;
+}
+
+#light-mode .coin-details-heading{
+    font-weight: 700 !important;
+    margin-top: 20px !important;
+    color: black !important;
+}
+
+.link-name{
+    text-transform: capitalize;
+    font-size: 1rem;
+    color: white;
+}
+
+#light-mode .link-name{
+    text-transform: capitalize;
+    font-size: 1rem;
+    color: black;
+}
+
+.crypto-chart {
+    background-color:#352b5d;
+    width:340px;
+    text-align:center;
+    padding:4px;
+    border-radius: 30px;
+}
+
+#light-mode .crypto-chart {
+    background-color:white;
+    border: 4px solid #ddcfff;
+    width:340px;
+    text-align:center;
+    padding:4px;
+    border-radius: 30px;
+}
+
+.crypto-header {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
  
  .crypto-card-stats {
      display: flex;
@@ -553,34 +655,10 @@
      color: var(--pink);
  }
  
- .coin-details-heading{
-     font-weight: 700 !important;
-     margin-top: 20px !important;
-     color: white !important;
- }
- 
- .coin-description {
-     color: white;
- }
- 
- .coin-stats{
-     display: flex;
-     justify-content: space-between;
-     border-bottom: 1px solid var(--border);
-     font-size: 1rem;
-     opacity: 0.9;
-     padding: 20px;
-     color: white;
- }
- 
  .coin-stats-name{
      display: flex;
      gap: 10px;
      font-size: 1rem;
- }
- 
- .stats{
-     font-weight: 800;
  }
  
  .coin-value-statistics-heading p{
@@ -630,12 +708,6 @@
      padding: 20px;
  }
  
- .link-name{
-     text-transform: capitalize;
-     font-size: 1rem;
-     color: white;
- }
- 
  .coin-link a{
      color: var(--pink);
      font-weight: 700;
@@ -645,6 +717,10 @@
  .coin-link:hover, .coin-stats:hover{
      background-color: rgba(255, 255, 255, 0.377);
  }
+
+ #light-mode .coin-link:hover, #light-mode .coin-stats:hover{
+    background-color: #ddcfff70;
+}
  
  @media screen and (max-width:1000px){
      .stats-container{
@@ -715,11 +791,6 @@
      color: #b3b5f1;
  }
  
- .chart-title{
-     color: white !important;
- }
-
- 
  .home-heading-container{
      display: flex;
      justify-content: space-between;
@@ -750,23 +821,6 @@
      font-size: 30px;
      text-align: center;
      color: white;
- }
- 
- .overview {
-     font-family: Inter, sans-serif;
-     font-weight: 800;
-     font-size: 30px;
-     color: white;
- }
- 
- .coin-heading-container {
-     font-weight: 800;
-     color: white;
- }
- 
- .coin-name {
-     color: white;
-     font-weight: 800;
  }
 
 /*------------------------------------------------------ Footer -------------------------------------------------*/
