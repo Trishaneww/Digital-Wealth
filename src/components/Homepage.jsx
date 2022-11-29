@@ -20,7 +20,7 @@ const Homepage = () => {
     <>
       <div>
         <div className="global-stats">
-        <div className="space">
+          <div className="space">
             <div>
               <p className="title">Cryptocurrencies</p>
               <p className="num">{globalStats.total}</p>

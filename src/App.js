@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
 import { Typography, Space } from 'antd';
-import { useState} from 'react';
 import { Homepage, News, Cryptocurrencies, CryptoDetails, Navbar } from './components';
 import './App.css';
 
@@ -17,16 +16,16 @@ const App = () => {
       <div>
         <div className="routes">
           <Switch>
-            <Route exact path='/'>
+            <Route exact path="/">
               <Homepage />
             </Route>
-            <Route exact path='/cryptocurrencies'>
+            <Route exact path="/cryptocurrencies">
               <Cryptocurrencies />
             </Route>
-            <Route exact path='/crypto/:coinId'>
+            <Route exact path="/crypto/:coinId">
               <CryptoDetails />
             </Route>
-            <Route exact path='/news'>
+            <Route exact path="/news">
               <News />
             </Route>
           </Switch>
@@ -37,9 +36,9 @@ const App = () => {
           <Link class="footer-info" to='/'>Copyright ©2022 Digital Wealth Inc.</Link>
         </Typography.Title>
         <Space>
-          <Link class="footer-info" to='/'>Home</Link>
+          <Link class="footer-info" to="/">Home</Link>
           {/* <Link style={{ color: 'white', textAlign: 'center' }} to='/exchanges'>Exchanges</Link> */}
-          <Link class="footer-info" to='/news'>News</Link>
+          <Link class="footer-info" to="/news">News</Link>
         </Space>
         <div className='switch-checkbox'>
           <label className='switch'>

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { Select, Row, Col} from 'antd';
+import { Select, Row, Col } from 'antd';
 import moment from 'moment';
-
 import { useGetCryptosQuery } from '../services/cryptoApi';
 import { useGetCryptoNewsQuery } from '../services/cryptoNewsApi';
 import Loader from './Loader';
@@ -37,8 +36,8 @@ const News = ({ simplified }) => {
         <Col xs={24} sm={12} lg={8} key={i}>
           <div className="news-container">
           <div className="news-border">
-          <div className="crypto-carddd">
-            <a href={news.url} target="_blank" rel="noreferrer">
+            <div className="crypto-carddd">
+              <a href={news.url} target="_blank" rel="noreferrer">
               <div className="news-image-container">
                 <h1 className="news-title" level={4}>{news.name}</h1>
                 <img className="news-image" src={news?.image?.thumbnail?.contentUrl || demoImage} />
