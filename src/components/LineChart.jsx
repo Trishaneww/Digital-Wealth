@@ -7,6 +7,7 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
   const coinPrice = [];
   const coinTimestamp = [];
 
+  // retrieves all instances of selected cryptos price 
   for (let i = 0; i < coinHistory?.data?.history?.length; i += 1) {
     coinPrice.push(coinHistory?.data?.history[i].price);
   }
@@ -14,6 +15,8 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
   for (let i = 0; i < coinHistory?.data?.history?.length; i += 1) {
     coinTimestamp.push(new Date(coinHistory?.data?.history[i].timestamp).toLocaleDateString());
   }
+
+  // presets for linegraph formatting and styling
   const data = {
     labels: coinTimestamp,
     datasets: [
@@ -27,6 +30,7 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
     ],
   };
 
+  // sets up the axis
   const options = {
     scales: {
       yAxes: [
@@ -41,6 +45,7 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
 
   return (
     <>
+    {/* displays linegraph using the retrieved data */}
       <Row className="chart-header">
         <Col className="price-container">
           <p level={5} className="price-change">Change: {coinHistory?.data?.change}%</p>
