@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import millify from 'millify';
 import { Link } from 'react-router-dom';
 import { Row, Col, Input } from 'antd';
-
 import { useGetCryptosQuery } from '../services/cryptoApi';
 import Loader from './Loader';
 
+// count of displayed cryptocurrencies on page
 const Cryptocurrencies = ({ simplified }) => {
   const count = simplified ? 10 : 100;
   const { data: cryptosList, isFetching } = useGetCryptosQuery(count);
@@ -14,9 +14,7 @@ const Cryptocurrencies = ({ simplified }) => {
 
   useEffect(() => {
     setCryptos(cryptosList?.data?.coins);
-
     const filteredData = cryptosList?.data?.coins.filter((item) => item.name.toLowerCase().includes(searchTerm));
-
     setCryptos(filteredData);
   }, [cryptosList, searchTerm]);
 
@@ -24,6 +22,7 @@ const Cryptocurrencies = ({ simplified }) => {
 
   return (
     <>
+      {/* searches through fetched data from API for a match */}
       {!simplified && (
         <div className="search-crypto">
           <Input
@@ -33,6 +32,7 @@ const Cryptocurrencies = ({ simplified }) => {
         </div>
       )}
       <Row gutter={[32, 32]} className="crypto-card-container">
+        {/* fetches data from API and maps over all cryptocurrencies within the database */}
         {cryptos?.map((currency) => (
           <Col
             xs={24}
@@ -41,8 +41,7 @@ const Cryptocurrencies = ({ simplified }) => {
             className="crypto-card"
             key={currency.uuid}
           >
-
-            {/* Note: Change currency.id to currency.uuid  */}
+            {/* Then uses this data to create cards for each cryptocurrency */}
             <Link key={currency.uuid} to={`/crypto/${currency.uuid}`}>
               <div className="lol">
                 <div className="crypto-cardd">
