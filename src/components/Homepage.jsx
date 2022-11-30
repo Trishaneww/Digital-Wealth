@@ -19,6 +19,8 @@ const Homepage = () => {
   return (
     <>
       <div>
+
+        {/* renders the current global crypto statistics as a banner */}
         <div className="global-stats">
           <div className="space">
             <div>
@@ -53,11 +55,14 @@ const Homepage = () => {
         </div>
       </div>
 
+      {/* displays a preview to the cryptocurrencies page */}
       <div className="home-heading-container">
         <h1 className="home-title">Top 10 Cryptos In The World</h1>
         <Title level={3} className="show-more"><Link to="/cryptocurrencies"><PlusOutlined /></Link></Title>
       </div>
       <Cryptocurrencies simplified />
+
+      {/* displays a preview to the newspage */}
       <div className="home-heading-container">
         <h1 className="home-title">Latest Crypto News</h1>
         <Title level={3}><Link to="/news"><PlusOutlined /></Link></Title>
