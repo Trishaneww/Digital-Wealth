@@ -28,7 +28,8 @@ With the growth of technology and increase in financial eduction to young people
 - Node.js
 - Express
 - Rapid API
-- Libraries (will name once chosen)
+- react-chartjs-2
+- antd design
 - React
 - MongoDb
 
