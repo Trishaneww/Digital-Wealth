@@ -11,6 +11,7 @@ import LineChart from './LineChart';
 const { Title } = Typography;
 const { Option } = Select;
 
+
 const CryptoDetails = () => {
   const { coinId } = useParams();
   const [timeperiod, setTimeperiod] = useState('7d');
