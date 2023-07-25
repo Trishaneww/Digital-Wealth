@@ -7,7 +7,6 @@ With the growth of technology and increase in financial eduction to young people
 ## Navigation
 - [Features](#features)
 - [Technologies](#technologies)
-- [Credits](#credits)
 - [License](#license)
 
 ## Features
@@ -33,19 +32,12 @@ With the growth of technology and increase in financial eduction to young people
 - React
 - MongoDb
 
-## Credits
-
-### Trishane Wijeyawickrema
-Link to Trishane's [GitHub Profile](https://github.com/Trishaneww)
-
-### Thach Minh
-Link to Thach's [GitHub Profile](https://github.com/TsunomakiWatamee)
 
 ## License
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Copyright (c) 2022 Trishane, Thach
+Copyright (c) 2023 Trishane
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
