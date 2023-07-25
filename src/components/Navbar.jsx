@@ -4,6 +4,7 @@ import { HomeOutlined, BulbOutlined, FundOutlined, MenuOutlined, LoginOutlined, 
 
 import icon from '../images/digital-wealth.png';
 
+
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(true);
   const [screenSize, setScreenSize] = useState(undefined);
