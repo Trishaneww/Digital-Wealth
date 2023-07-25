@@ -7,6 +7,7 @@ import './App.css';
 const App = () => {
   const [lightMode, setLightMode] = useState(false);
 
+  
   return (
     <div id={lightMode ? 'light-mode' : 'dark-mode'}>
       <div className="navbar">
